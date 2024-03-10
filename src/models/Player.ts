@@ -10,4 +10,8 @@ export class Player {
     this.activeTurn = activeTurn
     this.cards = cards
   }
+
+  setActiveTurn(active: boolean): void {
+    this.activeTurn = active
+  }
 }

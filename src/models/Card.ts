@@ -11,7 +11,13 @@ export class Card {
     this.color = color
   }
 
-  canBePlaced(currentCardPlaced: Card) {
+  /**
+   * Whether the card can be played
+   *
+   * @param currentCardPlaced The current card on the card pile
+   * @returns a boolean
+   */
+  canBePlaced(currentCardPlaced: Card): boolean {
     if (cardValueCheckToBePlaced.includes(currentCardPlaced.value)) {
       return this.value === currentCardPlaced.value || this.color === currentCardPlaced.color
     }
